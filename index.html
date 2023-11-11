@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زر OK</title>
+</head>
+<body>
+
+<p>الصفحة الأولى</p>
+<button onclick="addMoney()">OK</button>
+
+<script>
+    var clickCount = 0;
+
+    function addMoney() {
+        clickCount++;
+        if (clickCount % 3 === 0) {
+            alert('تمت إضافة 5 دولار!');
+            var currentAmount = parseInt(localStorage.getItem("money")) || 0;
+            var newAmount = currentAmount + 5;
+            localStorage.setItem("money", newAmount);
+        } else {
+            alert('نقرة أخرى');
+        }
+    }
+</script>
+<a href="money.html">sit 2</a>
+</body>
+</html>
